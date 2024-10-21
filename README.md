@@ -9,10 +9,6 @@
 
 ## Usage
 
-> [!NOTE]
-> If you're using a markup format other than Markdown, you may need to install
-> an external parser. For more information, see the [Vale documentation][2].
-
 Add the following (or similar) to one of your [`.github/workflows`][1] files:
 
 ```yaml
@@ -29,10 +25,16 @@ jobs:
 ```
 
 > [!TIP]
-> To use it with asciidoc add the following step to your workflow before calling `vale-action`:
+> If you're using a markup format other than Markdown, you may need to install
+> an external parser.
+>
+> For example, to use it with AsciiDoc add the following step to your workflow before calling `vale-action`:
 > ```yaml
->       - name: Install Asciidoctor
->         run: sudo apt-get install -y asciidoctor
+> - name: Install Asciidoctor
+>   run: sudo apt-get install -y asciidoctor
+> ```
+>
+> For more information, see the [Vale documentation][2].
 
 ## Repository Structure
 
