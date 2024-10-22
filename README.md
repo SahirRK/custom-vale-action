@@ -26,14 +26,16 @@ jobs:
 
 > [!TIP]
 > If you're using a markup format other than Markdown, you may need to install
-> an external parser.
->
-> To use it with AsciiDoc, for example, add the following step to your workflow 
-> before calling `vale-action`:
+> an external parser before calling `vale-action`:
 >
 > ```yaml
+> # For AsciiDoc users:
 > - name: Install Asciidoctor
 >   run: sudo apt-get install -y asciidoctor
+>
+> # For reStructuredText users:
+> - name: Install docutils
+>   run: sudo apt-get install -y docutils
 > ```
 >
 > See the [Vale documentation][2] for more information.
