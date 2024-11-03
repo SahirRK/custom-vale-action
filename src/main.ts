@@ -70,7 +70,7 @@ export async function run(actionInput: input.Input): Promise<void> {
       }
     );
 
-    if (code !== 0) {
+    if (code > 0) {
       core.setFailed(`Vale and reviewdog exited with status code: ${code}`);
     }
   } catch (error) {
